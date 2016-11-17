@@ -1,0 +1,21 @@
+<!--Display Article Section-->
+<p>
+	<strong>Title:</strong>
+	<%= @article.title %>
+</p>
+<p>
+	<strong>Text:</strong>
+	<%= @article.text %>
+</p>
+
+
+<!--Display_Commments Section-->
+<h2>Comments</h2>
+<%= render @article.comments %>
+
+<!--Add_Comment Form-->
+<h2>Add a comment:</h2>
+<%= render "comments/form" %>
+
+
+<%= link_to '< Back', articles_path %> | 	<%= link_to 'Edit', edit_article_path(@article) %>
